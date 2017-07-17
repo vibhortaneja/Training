@@ -1,13 +1,14 @@
-
-public class MySingleton {
-public static MySingleton ins;
-public static MySingleton getInstance(){
-if(ins == null){
-	ins = new MySingleton();
+public class MySingleton{
+public static MySingleton myInstance(){
+	MySingleton instance = null;
+	if (instance == null) {
+		instance = new MySingleton();
 	}
-return ins;
+	return instance;
 }
 private MySingleton(){
-	
+}
+public String teststring(){
+	return "MySingleton instance used";
 }
 }
